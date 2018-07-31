@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Hello World EOS</title>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+</head>
+
+<body class="container">
+    <h1 class="text-center">A Simple Dapp to write your message to EOS blockchain</h1>
+    <h3 class="text-center">Please create an account on
+        <a href="http://jungle.cryptolions.io/#home">EOS Jungle Testnet</a> to use this Dapp</h3>
+
+    <div class="form-group">
+        <label for="eos_account">EOS Account:</label>
+        <input id="eos_account" class="form-control" placeholder="EOS Account">
+    </div>
+    <div class="form-group">
+        <label for="private_key">Private Key:</label>
+        <input id="private_key" class="form-control" placeholder="Private key">
+    </div>
+
+    <div class="form-group">
+        <label for="candidate_name">Candidate Name:</label>
+        <input id="candidate_name" class="form-control" placeholder="Candidate name">
+    </div>
+    <button class="btn btn-default" onclick="vote()">Vote</button>
+
+    <section id="alerts">
+        <div class="alert alert-warning" role="alert">
+        </div>
+    </section>
+
+    <h1>Candidates</h1>
+    <table id="block-candidates" class="table">
+        <thead>
+            <tr>
+                <th>Candidate name</th>
+                <th>Current Votes</th>
+                <th>Public Key</th>
+                <th>Website</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <h1>Voters</h1>
+    <table id="block-voters" class="table">
+        <thead>
+            <tr>
+                <th>Voter name</th>
+                <th>List voted candidates</th>
+                <th>Amount for each candidate</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <div id="app"></div>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="bundle.js"></script>
+</body>
+
+</html>
